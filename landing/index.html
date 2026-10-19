@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopMaster: your shop, one chat away</title>
+    <meta name="description" content="ShopMaster is an AI agent that sets up and runs an online store for African small businesses, by chat. Built for the Access Bank hackathon." />
+    <meta name="theme-color" content="#101827" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101827'/%3E%3Cpath d='M9 12h14l-1.6 11H10.6z' fill='%23FF6A13'/%3E%3Cpath d='M12.5 12a3.5 3.5 0 0 1 7 0' stroke='%23F3F4EF' stroke-width='2' fill='none'/%3E%3C/svg%3E" />
+    <link rel="preload" href="/fonts/big-shoulders-display-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/schibsted-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <script>document.documentElement.classList.add("js");</script>
+  </head>
+  <body>
+    <div class="intro-curtain plaid" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a class="wordmark" href="#top" aria-label="ShopMaster home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M9 12h14l-1.6 11H10.6z" fill="#FF6A13"/><path d="M12.5 12a3.5 3.5 0 0 1 7 0" stroke="#F3F4EF" stroke-width="2" fill="none"/></svg>
+        ShopMaster
+      </a>
+      <nav aria-label="Sections">
+        <a class="link" href="#problem">Problem</a>
+        <a class="link" href="#how">How it works</a>
+        <a class="link" href="#approach">Approach</a>
+        <a class="link" href="#team">Why us</a>
+      </nav>
+      <a class="btn btn-small" href="#join"><span class="roll" data-text="Join the pilot">Join the pilot</span></a>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero" data-section="hero">
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            <span class="hero-line"><span>Your shop,</span></span>
+            <span class="hero-line"><span>one chat</span></span>
+            <span class="hero-line"><span class="accent-word">away.</span></span>
+          </h1>
+          <div class="hero-meta">
+            <p class="lede">ShopMaster is an AI agent that builds and runs an online store for African small businesses. Tell it what you sell, the way you'd tell a friend on WhatsApp, and in minutes you have a live store that takes orders and gets you paid.</p>
+            <div class="hero-actions">
+              <a class="btn" href="#how"><span class="roll" data-text="See how it works">See how it works</span></a>
+              <a class="link link-strong" href="#problem">Why it matters</a>
+            </div>
+            <p class="hero-note">Concept for the Access Bank hackathon. We're building the prototype now.</p>
+          </div>
+        </div>
+
+        <div class="hero-phone-wrap">
+          <div class="phone hero-phone" role="img" aria-label="Example chat: a seller tells the ShopMaster agent they sell sneakers, trousers and slides in Yaba, Lagos. The agent asks a few questions and replies that the store tundeskicks.shopmaster.africa is live with three products.">
+            <div class="phone-bar">
+              <span class="avatar">SM</span>
+              <span class="phone-who"><strong>ShopMaster</strong><small class="status">online</small></span>
+            </div>
+            <div class="chat" aria-hidden="true">
+              <div class="chat-inner">
+                <div class="msg me" data-msg>Hi, I want to sell clothes online. Sneakers, trousers and slides.</div>
+                <div class="msg bot" data-msg>Love it. What should we call your shop?</div>
+                <div class="msg me" data-msg>Tunde's Kicks</div>
+                <div class="msg bot" data-msg>Where are you, and do you deliver?</div>
+                <div class="msg me voice" data-msg>
+                  <span class="play"></span>
+                  <span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                  <small>0:07</small>
+                </div>
+                <div class="msg bot" data-msg>Got it: Yaba, Lagos. Delivery anywhere in Lagos. Send photos and prices and I'll do the rest.</div>
+                <div class="msg me tiles" data-msg>
+                  <span class="tile t1">Runner<br/>₦28,000</span>
+                  <span class="tile t2">Cargo<br/>₦15,500</span>
+                  <span class="tile t3">Slides<br/>₦9,000</span>
+                </div>
+                <div class="msg bot store-card" data-msg>
+                  <span>Done. Your store is live.</span>
+                  <span class="url">tundeskicks.shopmaster.africa</span>
+                  <span class="store-stats"><b>3</b> products, prices set, ready for orders</span>
+                </div>
+              </div>
+              <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <div class="phone-input" aria-hidden="true"><span>Message</span><span class="mic"></span></div>
+          </div>
+          <button class="replay" type="button">Replay chat</button>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section class="problem" id="problem" data-section="problem">
+        <div class="problem-text">
+          <h2 class="section-label">The problem</h2>
+          <p class="manifesto">Millions of Africans already sell online, in WhatsApp chats, Instagram DMs and by word of mouth. What they don't have is a real store. A website, hosting, a domain, product listings, payments and order tracking are expensive, technical and slow to set up. So good businesses stay small: orders get lost in chats, payments get chased one by one, and customers they could have reached never find them.</p>
+        </div>
+        <figure class="receipt-wrap">
+          <div class="receipt">
+            <p class="r-head">What it takes to sell online today</p>
+            <p class="r-rule"></p>
+            <ul class="r-items">
+              <li><span>Web designer</span><span>weeks of waiting</span></li>
+              <li><span>Hosting and domain</span><span>renew every year</span></li>
+              <li><span>Payment setup</span><span>paperwork</span></li>
+              <li><span>Photos and product copy</span><span>your late nights</span></li>
+              <li><span>Orders</span><span>lost in DMs</span></li>
+              <li><span>Payments</span><span>chased by hand</span></li>
+            </ul>
+            <p class="r-rule"></p>
+            <p class="r-total"><span>Total</span><span>too much for a small shop</span></p>
+            <div class="r-stub">
+              <p>With ShopMaster</p>
+              <p class="r-stub-big">One chat.</p>
+            </div>
+          </div>
+          <figcaption class="sr-only">A printed receipt listing what it takes to sell online today.</figcaption>
+        </figure>
+      </section>
+
+      <!-- GOAL -->
+      <section class="goal" data-section="goal">
+        <p class="section-label on-dark">Our goal</p>
+        <h2 class="goal-line" data-split>If you can send a WhatsApp message, you can run an online store.</h2>
+        <p class="goal-sub">No developers, no designers, no big upfront cost. Just your phone and the products you already sell.</p>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="how" id="how" data-section="how">
+        <div class="how-pin">
+          <div class="how-head">
+            <p class="section-label">How it works</p>
+            <h2 class="how-title">From "I sell sneakers" to paid, in five steps.</h2>
+          </div>
+          <div class="how-body">
+            <ol class="steps">
+              <li class="step is-active" data-step="0">
+                <span class="step-n">1</span>
+                <div><h3>Chat with the agent</h3><p>Tell it what you sell, by text or voice note. It asks only what it needs: shop name, location, delivery and prices.</p></div>
+              </li>
+              <li class="step" data-step="1">
+                <span class="step-n">2</span>
+                <div><h3>Your store goes live</h3><p>It writes your product descriptions, sets your prices, designs the store and hosts it on your own web address.</p></div>
+              </li>
+              <li class="step" data-step="2">
+                <span class="step-n">3</span>
+                <div><h3>Share your link</h3><p>Post it on your WhatsApp status, Instagram or TikTok. Customers browse and order without messaging back and forth.</p></div>
+              </li>
+              <li class="step" data-step="3">
+                <span class="step-n">4</span>
+                <div><h3>Orders come to you</h3><p>Every order arrives on WhatsApp with the item, size, price and delivery address. Nothing gets lost in your DMs.</p></div>
+              </li>
+              <li class="step" data-step="4">
+                <span class="step-n">5</span>
+                <div><h3>Deliver, then get paid</h3><p>The customer pays when they order. Once delivery is confirmed, the money lands in your bank account.</p></div>
+              </li>
+            </ol>
+
+            <div class="how-visual">
+              <div class="phone how-phone" aria-hidden="true">
+                <!-- screen 1: chat -->
+                <div class="screen is-active" data-screen="0">
+                  <div class="phone-bar"><span class="avatar">SM</span><span class="phone-who"><strong>ShopMaster</strong><small>online</small></span></div>
+                  <div class="mini-chat">
+                    <div class="msg me">I sell sneakers and trousers in Yaba.</div>
+                    <div class="msg bot">Nice. What should we call your shop?</div>
+                    <div class="msg me">Tunde's Kicks</div>
+                    <div class="msg bot">Do you deliver outside Lagos?</div>
+                    <div class="msg me voice"><span class="play"></span><span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><small>0:05</small></div>
+                  </div>
+                </div>
+                <!-- screen 2: store -->
+                <div class="screen" data-screen="1">
+                  <div class="store-top"><span class="store-url">tundeskicks.shopmaster.africa</span></div>
+                  <div class="store-hero"><strong>Tunde's Kicks</strong><span>Sneakers, trousers and slides. Delivery across Lagos.</span></div>
+                  <div class="store-grid">
+                    <div class="p"><span class="p-img t1"></span><b>Runner</b><small>₦28,000</small></div>
+                    <div class="p"><span class="p-img t2"></span><b>Cargo trousers</b><small>₦15,500</small></div>
+                    <div class="p"><span class="p-img t3"></span><b>Slides</b><small>₦9,000</small></div>
+                    <div class="p"><span class="p-img t4"></span><b>High-top</b><small>₦32,000</small></div>
+                  </div>
+                  <div class="store-btn">Order now</div>
+                </div>
+                <!-- screen 3: share -->
+                <div class="screen" data-screen="2">
+                  <div class="share">
+                    <p class="share-title">Share your store</p>
+                    <p class="share-link">tundeskicks.shopmaster.africa</p>
+                    <ul class="share-list">
+                      <li><span class="ic ic-wa"></span>WhatsApp status</li>
+                      <li><span class="ic ic-ig"></span>Instagram story</li>
+                      <li><span class="ic ic-tt"></span>TikTok bio</li>
+                      <li><span class="ic ic-copy"></span>Copy link</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- screen 4: order -->
+                <div class="screen" data-screen="3">
+                  <div class="phone-bar"><span class="avatar">SM</span><span class="phone-who"><strong>ShopMaster</strong><small>online</small></span></div>
+                  <div class="mini-chat">
+                    <div class="msg bot order">
+                      <span class="order-tag">New order #1042</span>
+                      <span><b>Runner</b>, size 43</span>
+                      <span>₦28,000, paid</span>
+                      <span>Deliver to: Allen Avenue, Ikeja</span>
+                      <span class="order-actions"><i>Accept</i><i>Call buyer</i></span>
+                    </div>
+                    <div class="msg me">Accepted. Sending today.</div>
+                  </div>
+                </div>
+                <!-- screen 5: paid -->
+                <div class="screen" data-screen="4">
+                  <div class="lock">
+                    <p class="lock-time">16:42</p>
+                    <div class="sms">
+                      <p class="sms-from">Your bank</p>
+                      <p class="sms-body">Credit Alert<br/>Amt: NGN 28,000.00<br/>Desc: ShopMaster order #1042<br/>Delivered and confirmed</p>
+                    </div>
+                    <div class="sms sms-2">
+                      <p class="sms-from">ShopMaster</p>
+                      <p class="sms-body">Order #1042 delivered. You've made ₦28,000 today.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress" aria-hidden="true"><i></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPROACH -->
+      <section class="approach" id="approach" data-section="approach">
+        <div class="approach-head">
+          <p class="section-label on-dark">Our approach</p>
+          <h2 class="approach-title">We start with what sellers already do, then add one building block at a time.</h2>
+          <p class="approach-legend"><span class="tag tag-now">Prototype</span> building for the hackathon <span class="tag tag-next">Next</span> after the hackathon <span class="tag tag-later">Later</span> as we grow</p>
+        </div>
+        <div class="h-wrap">
+          <div class="h-track">
+            <article class="block">
+              <span class="tag tag-now">Prototype</span>
+              <h3>The setup agent</h3>
+              <p>An AI agent that interviews the seller in plain language, then generates the product list, descriptions and prices. It asks only what it needs.</p>
+            </article>
+            <article class="block">
+              <span class="tag tag-now">Prototype</span>
+              <h3>Instant storefront</h3>
+              <p>Every store is hosted for the seller on its own address, works on any phone and loads fast on a weak connection.</p>
+            </article>
+            <article class="block">
+              <span class="tag tag-now">Prototype</span>
+              <h3>Orders on WhatsApp</h3>
+              <p>Orders go straight to the seller's WhatsApp with everything they need to deliver. They manage the store from the same chat.</p>
+            </article>
+            <article class="block">
+              <span class="tag tag-next">Next</span>
+              <h3>Voice in your language</h3>
+              <p>Voice notes in English, Pidgin, Yoruba, Hausa, Igbo and Swahili, built on what we learned from our voice-first bookkeeping project.</p>
+            </article>
+            <article class="block">
+              <span class="tag tag-next">Next</span>
+              <h3>Paid on delivery</h3>
+              <p>Buyers pay at checkout, and money is released to the seller's bank account once delivery is confirmed. Buyers trust it, sellers get paid.</p>
+            </article>
+            <article class="block">
+              <span class="tag tag-later">Later</span>
+              <h3>Ads that run themselves</h3>
+              <p>Connect Instagram and TikTok and the agent makes the ad, picks the audience and reports what sold, within a budget the seller approves.</p>
+            </article>
+            <article class="block">
+              <span class="tag tag-later">Later</span>
+              <h3>A daily business coach</h3>
+              <p>Each morning: what sold, what's running low and what to restock. The kind of help only big brands could afford before.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY US -->
+      <section class="team" id="team" data-section="team">
+        <div class="ticket">
+          <div class="ticket-main">
+            <p class="ticket-kicker">Previous hackathon</p>
+            <p class="ticket-place">1st place</p>
+            <p class="ticket-prize">$4,000 prize</p>
+            <p class="ticket-what">A platform that helps small businesses record sales and credit sales on WhatsApp, by voice.</p>
+          </div>
+          <div class="ticket-stub"><span>Winner</span></div>
+        </div>
+        <div class="team-copy">
+          <p class="section-label">Why us</p>
+          <h2 class="team-title" data-split-words>We've already built for these sellers, and it worked.</h2>
+          <p data-reveal>Our winning project taught us how African small business owners actually work. They live on WhatsApp, they prefer voice over typing, and they need tools that feel simple and familiar.</p>
+          <p data-reveal>ShopMaster is the next step: from helping businesses record their sales to helping them grow those sales online. With Access Bank's reach across Africa, it can help thousands of small businesses go online and get paid.</p>
+        </div>
+      </section>
+
+      <!-- JOIN -->
+      <section class="join" id="join" data-section="join">
+        <div class="plaid-band" aria-hidden="true"><div class="plaid plaid-inner"></div></div>
+        <div class="join-inner">
+          <div class="join-copy">
+            <h2 class="join-title" data-split-words>Want your shop in the pilot?</h2>
+            <p>We're looking for our first sellers to test ShopMaster. Leave your details and we'll message you on WhatsApp when it's ready.</p>
+          </div>
+          <form class="form" novalidate>
+            <div class="field">
+              <input id="f-name" name="name" type="text" placeholder=" " autocomplete="organization" required />
+              <label for="f-name">Business name</label>
+            </div>
+            <div class="field">
+              <input id="f-phone" name="phone" type="tel" placeholder=" " autocomplete="tel" inputmode="tel" required />
+              <label for="f-phone">WhatsApp number</label>
+            </div>
+            <div class="field">
+              <input id="f-sell" name="sell" type="text" placeholder=" " />
+              <label for="f-sell">What do you sell? (optional)</label>
+            </div>
+            <p class="form-error" role="alert" aria-live="polite"></p>
+            <button class="btn btn-submit" type="submit"><span class="btn-label">Join the pilot</span></button>
+            <p class="form-done" aria-live="polite" hidden>You're on the list. We'll message you on WhatsApp.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span class="foot-mark">ShopMaster</span>
+      <span>A concept for the Access Bank hackathon, 2026. Prototype in progress.</span>
+      <a class="link" href="#top">Back to top</a>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
