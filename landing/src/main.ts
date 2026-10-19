@@ -80,13 +80,11 @@ function playChat(delay = 0) {
 /* ---------- Intro ---------- */
 function intro() {
   const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-  tl.to(".intro-curtain", { scaleY: 0, transformOrigin: "50% 0%", duration: 0.85, ease: "expo.inOut" })
-    .from(".hero-line > span", { yPercent: 110, duration: 1.0, stagger: 0.08 }, "-=0.45")
+  tl.from(".hero-line > span", { yPercent: 110, duration: 1.0, stagger: 0.08 })
     .from(".hero-phone", { y: 90, rotate: 4, autoAlpha: 0, duration: 1.1 }, "<0.1")
     .from(".hero-meta > *", { y: 18, autoAlpha: 0, duration: 0.6, stagger: 0.06 }, "-=0.8")
-    .from(".nav", { autoAlpha: 0, duration: 0.5, ease: "power2.out" }, "<")
-    .set(".intro-curtain", { display: "none" });
-  playChat(1.2);
+    .from(".nav", { autoAlpha: 0, duration: 0.5, ease: "power2.out" }, "<");
+  playChat(0.8);
 }
 
 $(".replay").addEventListener("click", () => playChat(0));
@@ -227,10 +225,6 @@ function team() {
 }
 
 function join() {
-  gsap.fromTo(".plaid-inner", { xPercent: 0 }, {
-    xPercent: -25, ease: "none",
-    scrollTrigger: { trigger: ".join", start: "top bottom", end: "bottom top", scrub: true },
-  });
   SplitText.create(".join-title", {
     type: "lines", mask: "lines", autoSplit: true,
     onSplit(self) {
@@ -280,7 +274,6 @@ form.addEventListener("submit", (e) => {
 /* ---------- Boot ---------- */
 if (reduce) {
   showWholeChat();
-  gsap.set(".intro-curtain", { display: "none" });
   gsap.set("[data-reveal]", { autoAlpha: 1 });
   steps.forEach((s, i) => ScrollTrigger.create({ trigger: s, start: "top 70%", end: "bottom 70%", onToggle: (self) => self.isActive && setStep(i) }));
 } else {

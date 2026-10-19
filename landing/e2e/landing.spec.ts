@@ -50,7 +50,7 @@ test("reduced motion shows everything without the intro", async ({ browser }) =>
   const ctx = await browser.newContext({ reducedMotion: "reduce" });
   const page = await ctx.newPage();
   await page.goto("/");
-  await expect(page.locator(".intro-curtain")).toBeHidden();
+  await expect(page.locator(".hero-title")).toBeVisible();
   await expect(page.locator(".store-card")).toBeVisible();
   await ctx.close();
 });

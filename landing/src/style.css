@@ -66,24 +66,6 @@ button, input { font: inherit; color: inherit; }
   border-radius: 4px;
 }
 
-/* ---------- Plaid: the woven market bag ---------- */
-.plaid {
-  background-color: #f6f5f0;
-  background-image:
-    repeating-linear-gradient(90deg, rgba(34, 66, 166, 0.82) 0 16px, transparent 16px 26px, rgba(211, 38, 58, 0.78) 26px 34px, transparent 34px 58px),
-    repeating-linear-gradient(0deg, rgba(34, 66, 166, 0.82) 0 16px, transparent 16px 26px, rgba(211, 38, 58, 0.78) 26px 34px, transparent 34px 58px);
-}
-
-/* ---------- Intro curtain ---------- */
-.intro-curtain {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  pointer-events: none;
-}
-.js .intro-curtain { display: block; }
-
 /* ---------- Buttons and links ---------- */
 .btn {
   display: inline-flex;
@@ -680,7 +662,6 @@ button, input { font: inherit; color: inherit; }
 
 /* ---------- Join ---------- */
 .join { position: relative; background: var(--ink); color: var(--paper); }
-.plaid-band { height: clamp(70px, 9vw, 120px); }
 .join-inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
@@ -816,8 +797,5 @@ button, input { font: inherit; color: inherit; }
     scroll-behavior: auto !important;
   }
   .js [data-reveal] { visibility: visible; }
-  .js .intro-curtain { display: none; }
 }
 
-.plaid-band { overflow: hidden; }
-.plaid-inner { width: 200%; height: 100%; }
